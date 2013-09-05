@@ -1,0 +1,97 @@
+
+\documentclass{article}
+\usepackage{amsmath, amsfonts}
+
+\begin{document}
+
+\section{Greedy Algorithms}
+
+\textbf{General Definition:} \\
+Greedy algorithms make ``myopic'' decisions, meaning that make choices
+on the first pass through and hope that everything works out in the end. An example is \textbf{Dijkstra's shortest path algorithm} - there was one
+main while loop so the algorithm had only one shot to process all the
+nodes.
+\\
+Generally, analyzing running times for greedy algorithms is much easier
+than with divide and conquer, however analyzing correctness can be
+quite tricky.  Consequently, they are often not correct!!  An example
+of greedy algorithms being incorrect is Dijkstra's with negative 
+edge lengths, it will greedily take the shortest path, ignoring that
+future negative edge lengths could make other paths shorter.
+
+\subsection{Proofs of Correctness for Greedy Algorithms}
+\
+\begin{description}
+\item[$\bullet$ Method 1: ]{Proof by induction.  An example is the 
+      proof of correctness for Dijkstra's algorithm.}
+  \item[$\bullet$ Method 2: ]{Exchange argument - \textbf{more later}}
+\item[$\bullet$ Method 3: ]{Whatever works - LOL.}
+\end{description}
+
+\section{A Scheduling Problem}
+\
+\begin{description}
+\item[$\bullet$ Setup: ]{One shared resource (e.g, a processor) and 
+  many jobs to do (e.g. process).}
+\item[$\bullet$ Question: ]{In what order should we sequence the jobs?}
+\item[$\bullet$ Assume: ]{Each job $j$ has a weight $w_j$ (``priority'')
+    and a length $l_j$.}
+\item[$\bullet$ Objective functions: ]{Minimize the weighted sum of the
+    completion times.}
+\end{description}
+What are completion times? The \textbf{completion time} is the sum of job lengths up to and including the target job.
+
+\subsection{A Greedy Algorithm}
+Orders jobs by decreasing ratio $\frac {w_j}{l_j}$ (weight of job/
+length of job).
+\begin{description}
+  \item[$\bullet$]{}
+\end{description}
+
+\section{Minimum spanning tree algorithms}
+The idea is to connect a bunch of points as cheaply as possible.
+Examples are clustering or networking.
+
+\
+\begin{description}
+\item[$\bullet$ Input: ]{undirected graph G = (V, E) where V is vertices and E is edges.}
+\item[$\bullet$ ]{Assume graph is given as an adjacency list representation.}
+\item[$\bullet$ ]{Edge costs can be negative.}
+\item[$\bullet$ Output: ]{Minimum cost tree $T \leq E$ that spans all vertices. I.e $T$ has no cycles and the subgraph (V,T) is connected (there is a path from any vertex to all other vertexes.)}
+\item[$\bullet$ Assumptions to make things easier:]{
+\
+\begin{itemize}
+\item[$\bullet$]{Input graph G is connected. Note this is easy to check in a pre-processing step (DFS).}
+\item[$\bullet$]{In input graph edge costs are distinct. Note that Prim and Kruskal algorithms remain correct however when ties are allowed, we are just ignoring them to make things easier for now.}
+\end{itemize}}
+\end{description}
+
+\subsection{Prim's Algorithm}
+Similar to Dijkstra's (who also discovered it later).
+Almost linear time $\Rightarrow O(m\log(n))$ time, where is $m$ is the
+number of edges in a graph and $n$ is the number of vertices.
+\
+\begin{description}
+\item[$\bullet$]{With each iteration adds one edge.}
+\item[$\bullet$]{Its greedy, so it picks the edge with the smallest weight with each iteration.}
+\end{description}
+
+\textbf{The algorithm} (pseudocode):
+\
+\begin{enumerate}
+  \item Initialize $X = [s]$, where X will be a set of vertices that we have spanned so far. $s$ is an arbitrary vertex, $s \in V$.
+  \item $T = 0$, where $T$ is our tree, one edge will be added with each iteration.  Here we have an invariant: $X =$ vertices spanned by tree-so-far $T$. 
+  \item The main while loop, each iteration is responsible for claiming one new edge crossing the 'frontier' greedily (what is the cheapest edge to claim).
+  \item while $X \neq V:$
+    \
+    \begin{enumerate}
+      \item let $e = (u,v)$ be the cheapest edge of $G$ (the graph) such that $u \in X, v \text{ not} \in X$.
+      \item add $e$ to $T$
+      \item add $v$ to $X$
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Kruskal's Algorithm}
+Almost linear time $\Rightarrow O(m\log(n))$ time.
+\end{document}
+
