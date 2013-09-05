@@ -1,4 +1,7 @@
 *~
 auto/
 /javacodes/bin/
-/javacodes/.*
+/javacodes/*
+!/javacodes/src/*
+!pythoncodes/
+
