@@ -92,6 +92,80 @@ number of edges in a graph and $n$ is the number of vertices.
 \end{enumerate}
 
 \subsection{Kruskal's Algorithm}
-Almost linear time $\Rightarrow O(m\log(n))$ time.
+Almost linear time $\Rightarrow O(m\log(n))$ time.  Unlike Prim's algorithm, it just picks the cheapest edge from
+all the remaining edges.
+
+\textbf{The algorithm} (pseudocode):
+\
+\begin{enumerate}
+\item Sort the edges in order of increasing cost.
+\item Initialize T = 0, the tree in progress
+\item for i = 1 to m:
+\
+\begin{enumerate}
+\item - if T U {i} has no cycles:
+\item - add i to T
+\end{enumerate}
+\item return T
+\end{enumerate}
+
+\section{Clustering}
+Informal goal: Given $n$ 'points' classify them into coherent groups.
+\\ 
+Assumptions: 
+\
+\begin{enumerate}
+\item As input, we are given a (dis)similarity measure - a \textbf{distance} $d(p,q)$ between each point pair.
+\item Symmetric (i.e. $d(p,q) = d(p,q)$)
+\item Examples: euclidean distance or some other norm measure, genome similarity, etc.
+\item Goal: So things that are similar should be in the same group while dissimilar items should be in different groups, pretty 
+straightforward.
+\end{enumerate}
+There are many ways to approach clustering, we are going to adopt a specific objective function to look at more closely, the 
+\textbf{Max-Spacing k-Clusterings}.
+\
+\begin{enumerate}
+\item Assume: we know k = \# of clusters desired (we know how many clusters we want)
+\item Points are considered separated if they are in different groups.
+\item Definition: The spacing of a k-clustering is min separated $d(p,q)$.  So, the algorithm's objective is to make all the
+separated points be as far apart as possible, to maximize the distance between groups (the bigger the better).
+\item Problem Statement: given a distance measure $d$ and $k$, compute the k-clustering with maximum spacing.
+\end{enumerate}
+
+\subsection{A Greedy Algorithm for k-Clustering}
+We start with every point in its own cluster.  Start looking at the most alarming pair, i.e. the closest pair.  The only thing to 
+do here is to fuse them into the same cluster. \\
+\textbf{Pseudocode:}
+\
+\begin{enumerate}
+  \item -initially, each point is in a separate cluster
+\item - repeat until only k clusters remain:
+\item - let p,q = the closest pair of separated points (determines the current spacing)
+\item - merge the clusters containing p,q into a single cluster
+\end{enumerate}
+Note: this is just like Kruskal's MST algorithm, but aborted early (i.e. when k clusters remain), and points = vertices,
+distances = edge costs.
+
+\section{Huffman Codes}
+Make variable length encoding to take advantage of the fact that in many cases certain characters appear more frequently.
+Thus, encoding those characters with fewer bits can save the overall number of bits required for encoding (applied if compression, 
+mp3s, genomes, etc).
+\begin{itemize}
+\item Goal: come up with the best binary prefix-free encoding for a given set of character frequencies.
+\item Useful fact: Think of binary codes as binary trees (right child labeled 1, left child 0, nodes labeled with characters from
+encoded alphabet)
+\item In a prefix free code, only leaves can be assigned characters to encode (no characters are ancestors of others)
+\item To decode, just follow path until you reach a node with a character, i.e. a leaf in the prefix-free scenario
+\item The number of bits required to encode is a function of the depth of the tree
+\end{itemize}
+The problem definition:
+\
+\begin{itemize}
+\item Input: probability $p_i$ for each character $i \in \epsilon$, the alphabet of interest.
+\item Notation: if T = a binary tree that has leaves with one to one correspondence with the symbols of $\epsilon$,
+then the average encoding length, $L(T) = \sum_{i\in\epsilon}p_i - [\text{depth of }i \text{ in } T]$.  In other words, 
+the average encoding length is the weighted average of the depths of the binary encoding tree.
+\end{itemize}
+
 \end{document}
 
