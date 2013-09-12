@@ -161,10 +161,46 @@ encoded alphabet)
 The problem definition:
 \
 \begin{itemize}
-\item Input: probability $p_i$ for each character $i \in \epsilon$, the alphabet of interest.
-\item Notation: if T = a binary tree that has leaves with one to one correspondence with the symbols of $\epsilon$,
-then the average encoding length, $L(T) = \sum_{i\in\epsilon}p_i - [\text{depth of }i \text{ in } T]$.  In other words, 
+\item Input: probability $p_i$ for each character $i \in \Sigma$, the alphabet of interest.
+\item Notation: if T = a binary tree that has leaves with one to one correspondence with the symbols of $\Sigma$,
+then the average encoding length, $L(T) = \sum_{i\in\Sigma}p_i - [\text{depth of }i \text{ in } T]$.  In other words, 
 the average encoding length is the weighted average of the depths of the binary encoding tree.
+\end{itemize}
+Huffman's idea was to build the tree from the bottom up, starting at the leaves, and successively merging groups together.
+Leaves that are merged first are encoded by the most bits (i.e. with each merging, every leave in the merged groups picks
+up a new bit as part of its encoding, so leaves merged last are encoded by the fewest bits).
+
+\subsection{A greedy algorithm}
+Given frequencies $p_i$ as input.  Let $\Sigma$ be out alphabet we want to encode.
+\begin{itemize}
+\item If $|\Sigma| = 2$, return a tree with just two leaves.
+\item else:
+\
+\begin{itemize}
+\item Let a,b $\in \Sigma$ have the smallest frequencies
+\item Let $\Sigma' = \Sigma$ with a,b replaced by new 'meta' symbol 'ab'.
+\item Define $p_{ab} = p_a + p_b$.
+\item Recursively compute T' (for the alphabet $\Sigma'$)
+\end{itemize}
+\item Extend T' (with leaves from $\Sigma'$) to a tree T (with leaves from $\Sigma$) by splitting leaf 'ab' into 'a' and 'b' again
+\item Return T
+\end{itemize}
+
+\subsection{Speed-ups}
+The naive implementation above has $O(n^2)$ running time, where $n = |\Sigma|$.
+Speed-ups:
+\
+\begin{itemize}
+\item Use a heap to perform the repeated minimum computations.
+\item Use keys = frequencies
+\item after extracting the two smallest frequency symbols, re-insert the new meta-symbol back into the heap with
+  the new key = the sum of their frequencies.
+\item This now goes to $O(n\log n)$ time.
+\end{itemize}
+Even faster:
+\
+\begin{itemize}
+\item Can be implemented with one sort and linear work with two queues!
 \end{itemize}
 
 \end{document}
