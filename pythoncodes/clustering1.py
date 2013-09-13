@@ -41,5 +41,5 @@ for i in range(len(S)):
 ans = S[i][2]
 
 ## For clust1: Result should be 7. Clusters: {1: [1, 2], 4: [4], 5: [5], 7: [7, 8, 6, 9, 3]}
-## For clustering1: 2277
-
+## For primcase: 2277
+## For clustering1: 106
