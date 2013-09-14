@@ -55,83 +55,37 @@ def make1bitdiff(seq):
 #         if value == b:
 #             clusters[key] = a
 
-## with union find
+## with union find, doesnt quite work... comes out with a few too
+##  many sets for larger tests
 from unionFind import UnionFind
-l = lines[1:]
+l = lines4[1:]
 clusters = set(l) # starting clusters - removes copies from the input
 uf = UnionFind()
 for seq in l:
     uf.union(seq) # everyone in a singleton set
-
-## Make a set containing all possible 0,1,2 distances
-seqs = set()
-for seq in set(lines4[1:]):
+for seq in uf:
     diffs = make1bitdiff(seq)
-    seqs = seqs | set(diffs)
+    for i in diffs:
+        if i in uf:
+            uf.union(i,seq)
 
-start = len(set(lines4[1:]))
-for seq in set(lines4[1:]):
-    if seq in seqs:
-        start -= 1
+for seq in uf.parents.values():
+    diffs = make1bitdiff(seq)
+    for i in diffs:
+        if i in uf:
+            uf.union(i,seq)
 
-done = set()
-count = len(clusters)
-for seq in clusters:
-    onebits = make1bitdiff(seq)
-    for i in onebits:
-        if i not in done and i in clusters:
-            done = done | set([i])
-            count -= 1
-            if seq not in done:
-                done = done | set([seq])
-print(count)
-
-## try opposite, counting only when we find a seq that has no hits
-##  faster b/c no list to build
-count = 0
+## Brute Force O(n^2)++ time, it works but is too slow to use for
+##  large output
+clusters = {seq:seq for seq in uf.parents.values()}
 for seq in clusters:
     onebits = make1bitdiff(seq)
     for i in onebits:
         if i in clusters:
-            break;
-count -= 1
-print(count)
+            val = clusters[i]
+            for key,value in clusters.items():
+                if value == val:
+                    clusters[key] = seq
+## Lower bound of 5499 for number of clusters*
 
-
-## answer is the number of clusters remaining, so the cardinality
-##  of the clusters 
-ans = len(set(uf.parents.values()))
-print(ans)
-
-## len(clusters) = 198788
-## len(uf.weights) = 200000 - 193289
-## ans = 1508 (wrong)
-
-## Algorithm
-lines = lines4
-
-clusters = {seq:seq for seq in lines}
-for seq in clusters:
-    onebits = make1bitdiff(seq)
-    for i in onebits:
-        if i in clusters:
-            clusters[i] = clusters[seq]
-
-len(set([value for key,value in clusters.items()]))
-
-
-S = sorted(lines[1:], key = lambda line: line[2])
-for i in range(len(S)):
-    a = clusters[S[i][0]]
-    b = clusters[S[i][1]]
-    if a != b:
-        # if we reached k, break off
-        if len(set(clusters.values())) == 4:
-            break
-        # merge b into a (change b values to a)
-        for key,value in clusters.items():
-            if value == b:
-                clusters[key] = a
-ans = S[i][2]
-
-
+l = lines[1:]
