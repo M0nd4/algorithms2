@@ -6,3 +6,4 @@ auto/
 !pythoncodes/
 .r*
 /pythoncodes/.r*
+!/javacodes/src
