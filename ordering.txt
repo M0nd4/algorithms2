@@ -1,0 +1,22 @@
+  XI. THE KNAPSACK PROBLEM (Week 3)
+(expanded, click to collapse)
+
+-    The Knapsack Problem (10 min)
+-    A Dynamic Programming Algorithm (10 min)
+-    Example [Review - Optional] (14 min)
+ 
+ XII. SEQUENCE ALIGNMENT (Week 3)
+(expanded, click to collapse)
+
+-    Optimal Substructure (14 min)
+-     A Dynamic Programming Algorithm (12 min)
+-     Video (MP4) for A Dynamic Programming Algorithm (12 min)
+
+ XIII. OPTIMAL BINARY SEARCH TREES (Week 3)
+(expanded, click to collapse)
+
+-    Problem Definition (12 min)
+-     Optimal Substructure (9 min)
+-     Proof of Optimal Substructure (7 min)
+-     A Dynamic Programming Algorithm I (10 min)
+-     A Dynamic Programming Algorithm II (9 min)
