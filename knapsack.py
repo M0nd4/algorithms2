@@ -8,48 +8,34 @@
 ##  subject to the constraint that the sum of the sizes (ws) is less than or equal to 
 ##  the capacity W
 import sys
-# lines = lines = [line.strip() for line in open('C:/users/noah/desktop/algorithms2/knapsack1.txt')]
-# maxweight = int(lines[0][0])
-# items = int(lines[0][1])
-# lines = [[int(num) for num in line.split()] for line in lines[1:]]
 
+## small problem
+lines = [line.strip() for line in open('c:/home/algorithms2/knapsack1.txt')]
+maxweight = int(lines[0].split()[0])
+items = int(lines[0].split()[1])
+lines = [[int(num) for num in line.split()] for line in lines[1:]]
+
+## big problem
+lines = [line.strip() for line in open('c:/home/algorithms2/knapsack_big.txt')]
+maxweight = int(lines[0].split()[0])
+items = int(lines[0].split()[1])
+lines = [[int(num) for num in line.split()] for line in lines[1:]]
 
 def knapsack(items, maxweight):
-    # Create an (N+1) by (W+1) 2-d list to contain the running values
-    # which are to be filled by the dynamic programming routine.
-    #
-    # There are N+1 rows because we need to account for the possibility
-    # of choosing from 0 up to and including N possible items.
-    # There are W+1 columns because we need to account for possible
-    # "running capacities" from 0 up to and including the maximum weight W.
-    bestvalues = [[0] * (maxweight + 1)
-                  for i in xrange(len(items) + 1)]
-
+    bestvalues = [[0] * (maxweight + 1) for i in range(len(items) + 1)]
     # Enumerate through the items and fill in the best-value table
     for i, (value, weight) in enumerate(items):
-        # Increment i, because the first row (0) is the case where no items
-        # are chosen, and is already initialized as 0, so we're skipping it
+        # row 0 is full of 0s
         i += 1
-        for capacity in xrange(maxweight + 1):
-            # Handle the case where the weight of the current item is greater
-            # than the "running capacity" - we can't add it to the knapsack
+        for capacity in range(maxweight + 1):
+            # Edge case: weight bigger than sub-capacity
             if weight > capacity:
                 bestvalues[i][capacity] = bestvalues[i - 1][capacity]
-            else:
-                # Otherwise, we must choose between two possible candidate values:
-                # 1) the value of "running capacity" as it stands with the last item
-                #    that was computed; if this is larger, then we skip the current item
-                # 2) the value of the current item plus the value of a previously computed
-                #    set of items, constrained by the amount of capacity that would be left
-                #    in the knapsack (running capacity - item's weight)
-                candidate1 = bestvalues[i - 1][capacity]
-                candidate2 = bestvalues[i - 1][capacity - weight] + value
-
-                # Just take the maximum of the two candidates; by doing this, we are
-                # in effect "setting in stone" the best value so far for a particular
-                # prefix of the items, and for a particular "prefix" of knapsack capacities
-                bestvalues[i][capacity] = max(candidate1, candidate2)
-
+            else: 
+                # Choose between case where i is in and i is out of optimal soln
+                case1 = bestvalues[i - 1][capacity]
+                case2 = bestvalues[i - 1][capacity - weight] + value
+                bestvalues[i][capacity] = max(case1, case2)
     # Reconstruction
     # Iterate through the values table, and check
     # to see which of the two candidates were chosen. We can do this by simply
@@ -66,30 +52,23 @@ def knapsack(items, maxweight):
             reconstruction.append(items[i - 1])
             j -= items[i - 1][1]
         i -= 1
-
     # Reverse the reconstruction list, so that it is presented
     # in the order that it was given
     reconstruction.reverse()
-
     # Return the best value, and the reconstruction list
     return bestvalues[len(items)][maxweight], reconstruction
 
+## Recursive version to handle larger memory case
+def recursiveKnapsack(items, maxweight):
+    def loop(numItems, lim):
+        if numItems == 0:
+            return 0
+        elif items[numItems-1][1] > lim:
+            return loop(numItems-1,lim)
+        else:
+            return max(loop(numItems-1,lim), loop(numItems - 1, lim - items[numItems-1][1]) + items[numItems-1][0])
+    return loop(len(items), maxweight)
 
-if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print('usage: knapsack.py [file]')
-        sys.exit(1)
+sys.setrecursionlimit(6000)
+ans = recursiveKnapsack(lines, maxweight)
 
-    filename = sys.argv[1]
-    with open(filename) as f:
-        lines = f.readlines()
-
-    maxweight = int(lines[0])
-    items = [map(int, line.split()) for line in lines[1:]]
-
-    bestvalue, reconstruction = knapsack(items, maxweight)
-
-    print('Best possible value: {0}'.format(bestvalue))
-    print('Items:')
-    for value, weight in reconstruction:
-        print('V: {0}, W: {1}'.format(value, weight))
