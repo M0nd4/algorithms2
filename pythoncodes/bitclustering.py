@@ -88,5 +88,4 @@ for seq in clusters:
                     clusters[key] = seq
 ## Lower bound of 5499 for number of clusters*
 
-
-
+l = lines[1:]
