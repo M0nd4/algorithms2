@@ -1,0 +1,98 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+/**
+ * Find the shortest shortest path amongst three graphs If there are negative
+ * cycles there can be no shortest path
+ */
+public class SSP {
+    public static int numEdges    = 0;
+    public static int numVertices = 0;
+
+    /**
+     * Read in data The first line indicates the number of vertices and edges,
+     * respectively. Each subsequent line describes an edge (the first two
+     * numbers are its tail and head, respectively) and its length (the third
+     * number). NOTE: some of the edge lengths are negative. NOTE: These graphs
+     * may or may not have negative-cost cycles.
+     * 
+     * @throws IOException
+     */
+    public static EdgeWeightedDigraph readIn(String filename)
+            throws IOException {
+        FileReader fileReader = new FileReader(filename);
+        BufferedReader br = new BufferedReader(fileReader);
+        EdgeWeightedDigraph G = null;
+        String line = null;
+        int i = 0;
+        while ((line = br.readLine()) != null) {
+            String[] parts = line.split(" ");
+            // Process the first line
+            if (i == 0) {
+                numVertices = Integer.parseInt(parts[0]);
+                numEdges = Integer.parseInt(parts[1]);
+                G = new EdgeWeightedDigraph(numEdges);
+                i++;
+            } else {
+                DirectedEdge e = new DirectedEdge(Integer.parseInt(parts[0]),
+                        Integer.parseInt(parts[1]), Integer.parseInt(parts[2]));
+                G.addEdge(e);
+            }
+        }
+        br.close();
+        return G;
+    }
+
+    public static void main(String[] args) throws IOException {
+        EdgeWeightedDigraph G = readIn(args[0]);
+        System.out.println("The number of edges are " + numEdges
+                + ", and the number of vertices are " + numVertices);
+        System.out.println(G.E());
+
+        // Run Bellman Ford from single vertice to check for cycles
+        DirectedEdge e = new DirectedEdge(0, 1, 0);
+        G.addEdge(e);
+        BellmanFordSP ssp = new BellmanFordSP(G, 1);
+        System.out.println(ssp.hasNegativeCycle());
+
+        // Run Bellman Ford from all vertices
+        double minPath = Double.POSITIVE_INFINITY;
+        for (int v = 0; v < G.V(); v++) {
+            if (ssp.hasPathTo(v))
+                if (ssp.distTo(v) < minPath) {
+                    minPath = ssp.distTo(v);
+                }
+        }
+        
+
+    // Report min
+        System.out.println(minPath);
+
+    // Add directed edges to matrix
+    // AdjMatrixEdgeWeightedDigraph G2 = new AdjMatrixEdgeWeightedDigraph(
+    // G.E());
+    // for (DirectedEdge i : G.edges()) {
+    // G2.addEdge(i);
+    // }
+
+    // run the floyd warshall
+    // FloydWarshall ssp = new FloydWarshall(G2);
+
+    // check for negative cycle
+    // System.out.println("Negative Cycles: " + ssp.hasNegativeCycle());
+
+    // Retrieve shortest paths
+    // System.out.println(G2.V());
+    // double min = Double.POSITIVE_INFINITY;
+    // for (int v = 0; v < G2.V(); v++) {
+    // for (int w = 0; w < G.V(); w++) {
+    // if (ssp.hasPath(v, w))
+    // if (ssp.dist(v, w) < min)
+    // min = ssp.dist(v, w);
+    // }
+    // }
+    // Report min
+    // System.out.println(min);
+}   
+}

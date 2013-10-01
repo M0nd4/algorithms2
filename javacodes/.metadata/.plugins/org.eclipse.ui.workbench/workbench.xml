@@ -1,53 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="13" version="2.0">
+<workbench progressCount="19" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="65" y="24">
+<window height="768" maximized="true" width="1024" x="180" y="180">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="132" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="126" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
-<coolItem id="org.scala-ide.sdt.core.toolbar" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="141" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="80" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="80" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
+<coolItem id="org.scala-ide.sdt.core.toolbar" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="scala.texteditor.actionset" itemType="typeToolBarContribution" x="40" y="30"/>
+<coolItem id="scala.texteditor.actionset" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1379726985583" focus="true" label="Workspace - Java">
+<page aggregateWorkingSetId="Aggregate for window 1380588345045" focus="true" label="Workspace - Java">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BitCluster.java" partName="BitCluster.java" title="BitCluster.java" tooltip="/home/noah/algorithms2/javacodes/src/BitCluster.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/noah/algorithms2/javacodes/src/BitCluster.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4834" selectionTopPixel="2141"/>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="DijkstraAllPairsSP.class" partName="DijkstraAllPairsSP.class" title="DijkstraAllPairsSP.class" tooltip="DijkstraAllPairsSP" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(DijkstraAllPairsSP.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="749" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="BellmanFordSP.class" partName="BellmanFordSP.class" title="BellmanFordSP.class" tooltip="BellmanFordSP" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(BellmanFordSP.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="532" selectionOffset="7191" selectionTopPixel="3497"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BitCluster.java" partName="BitCluster.java" path="C:/home/algorithms2/javacodes/BitCluster/src/BitCluster.java" title="BitCluster.java" tooltip="BitCluster/src/BitCluster.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BitCluster/src/BitCluster.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="341" selectionOffset="1015" selectionTopPixel="349"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="EdgeWeightedDigraph.class" partName="EdgeWeightedDigraph.class" title="EdgeWeightedDigraph.class" tooltip="EdgeWeightedDigraph" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(EdgeWeightedDigraph.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="19" selectionOffset="1085" selectionTopPixel="432"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="AdjMatrixEdgeWeightedDigraph.class" partName="AdjMatrixEdgeWeightedDigraph.class" title="AdjMatrixEdgeWeightedDigraph.class" tooltip="AdjMatrixEdgeWeightedDigraph" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(AdjMatrixEdgeWeightedDigraph.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="877" selectionTopPixel="224"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="DirectedEdge.class" partName="DirectedEdge.class" title="DirectedEdge.class" tooltip="DirectedEdge" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(DirectedEdge.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="314"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" partName="Test.java" path="C:/home/algorithms2/javacodes/ShortestPaths/src/Test.java" title="Test.java" tooltip="ShortestPaths/src/Test.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ShortestPaths/src/Test.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="634" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="DijkstraSP.class" partName="DijkstraSP.class" title="DijkstraSP.class" tooltip="DijkstraSP" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(DijkstraSP.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="453"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Errors (1 item)"/>
 <category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="390" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<columnWidths org.eclipse.ui.ide.locationField="120" org.eclipse.ui.ide.markerType="120" org.eclipse.ui.ide.pathField="160" org.eclipse.ui.ide.resourceField="120" org.eclipse.ui.ide.severityAndDescriptionField="400"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -55,9 +93,11 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console"/>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
-<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1379726985583">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1380588345045">
 <customFilters userDefinedPatternsEnabled="false">
 <xmlDefinedFilters>
 <child filterId="scala.tools.eclipse.javaelements.ScalaElementFilter" isEnabled="true"/>
@@ -140,13 +180,13 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="explorer">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="explorer">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="explorer"/>
-<info folder="true" part="problems" ratio="0.75" ratioLeft="498" ratioRight="166" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<info part="org.eclipse.ui.editorss" ratio="0.249499" ratioLeft="249" ratioRight="749" relationship="2" relative="explorer"/>
+<info folder="true" part="problems" ratio="0.7496063" ratioLeft="476" ratioRight="159" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
@@ -155,7 +195,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="right" ratio="0.74899864" ratioLeft="561" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
@@ -163,7 +203,7 @@
 </mainWindow>
 </layout>
 </perspective>
-<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -214,58 +254,64 @@
 <perspective_action id="org.scala-ide.sdt.core.perspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.jdt.ui.JavadocView"/>
-<view id="org.eclipse.jdt.ui.SourceView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="131072" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
+<fastViews>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="left" orientation="512" selectedTabId="org.eclipse.jdt.ui.PackageExplorer" style="1">
+<fastViews>
+<view id="org.eclipse.jdt.ui.PackageExplorer" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="1">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="left">
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="left">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.75" ratioLeft="498" ratioRight="166" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
-<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<info part="org.eclipse.ui.editorss" ratio="0.19591409" ratioLeft="374" ratioRight="1535" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.7491785" ratioLeft="684" ratioRight="229" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="right" ratio="0.7496513" ratioLeft="1075" ratioRight="359" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
@@ -275,10 +321,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" uri="file:/home/noah/algorithms2/javacodes/src/BitCluster.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ShortestPaths/src/SSP.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(BellmanFordSP.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(DijkstraAllPairsSP.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(DijkstraSP.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(FloydWarshall.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ShortestPaths/src/Test.java"/>
 </editors>
-<item active="true" historyLabel="BitCluster.java" index="0">
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="1582" y="0"/>
+</item>
+<item historyLabel="BellmanFordSP.class" index="1">
+<position info="not_deleted" x="1338" y="13"/>
+</item>
+<item historyLabel="DijkstraAllPairsSP.class" index="2">
+<position info="not_deleted" x="395" y="18"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="3609" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="3515" y="0"/>
+</item>
+<item historyLabel="DijkstraAllPairsSP.class" index="2">
+<position info="not_deleted" x="395" y="18"/>
+</item>
+<item historyLabel="DijkstraSP.class" index="3">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="DijkstraAllPairsSP.class" index="2">
+<position info="not_deleted" x="749" y="0"/>
+</item>
+<item historyLabel="BellmanFordSP.class" index="1">
+<position info="not_deleted" x="1338" y="13"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="3515" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="2167" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="FloydWarshall.class" index="4">
+<position info="not_deleted" x="841" y="29"/>
+</item>
+<item historyLabel="FloydWarshall.class" index="4">
+<position info="not_deleted" x="897" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="FloydWarshall.class" index="4">
+<position info="not_deleted" x="5244" y="525"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="2681" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="3750" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="2550" y="0"/>
+</item>
+<item historyLabel="FloydWarshall.class" index="4">
+<position info="not_deleted" x="5524" y="235"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="2502" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="3961" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="4001" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="4089" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="2207" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="2231" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="2504" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="2738" y="0"/>
+</item>
+<item historyLabel="BellmanFordSP.class" index="1">
+<position info="not_deleted" x="7191" y="532"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="3048" y="0"/>
+</item>
+<item historyLabel="BellmanFordSP.class" index="1">
+<position info="not_deleted" x="7191" y="532"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position/>
+</item>
+<item historyLabel="BellmanFordSP.class" index="1">
+<position info="not_deleted" x="7191" y="532"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="2603" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="2922" y="0"/>
+</item>
+<item historyLabel="SSP.java" index="0">
+<position info="not_deleted" x="3277" y="0"/>
+</item>
+<item historyLabel="BellmanFordSP.class" index="1">
+<position info="not_deleted" x="7191" y="532"/>
+</item>
+<item active="true" historyLabel="Test.java" index="5">
+<position info="not_deleted" x="689" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -286,6 +484,13 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="bottom"/>
+<trimItem IMemento.internal.id="right"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -297,8 +502,41 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BitCluster.java" tooltip="/home/noah/algorithms2/javacodes/src/BitCluster.java">
-<persistable uri="file:/home/noah/algorithms2/javacodes/src/BitCluster.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DijkstraSP.class" tooltip="DijkstraSP">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(DijkstraSP.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SSP.java" tooltip="ShortestPaths/src/SSP.java">
+<persistable path="/ShortestPaths/src/SSP.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="ShortestPaths/src/Test.java">
+<persistable path="/ShortestPaths/src/Test.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DirectedEdge.class" tooltip="DirectedEdge">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(DirectedEdge.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="AdjMatrixEdgeWeightedDigraph.class" tooltip="AdjMatrixEdgeWeightedDigraph">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(AdjMatrixEdgeWeightedDigraph.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EWD.java" tooltip="ShortestPaths/src/EWD.java">
+<persistable path="/ShortestPaths/src/EWD.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="EdgeWeightedDigraph.class" tooltip="EdgeWeightedDigraph">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(EdgeWeightedDigraph.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BitCluster.java" tooltip="BitCluster/src/BitCluster.java">
+<persistable path="/BitCluster/src/BitCluster.java"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BitCluster.java" tooltip="C:\home\algorithms2\javacodes\src\BitCluster.java">
+<persistable uri="file:/C:/home/algorithms2/javacodes/src/BitCluster.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="BellmanFordSP.class" tooltip="BellmanFordSP">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(BellmanFordSP.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DijkstraAllPairsSP.class" tooltip="DijkstraAllPairsSP">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(DijkstraAllPairsSP.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="FloydWarshall.class" tooltip="FloydWarshall">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ShortestPaths/C:\/home\/algs4\/algs4.jar&lt;(FloydWarshall.class"/>
 </file>
 </mruList>
 </workbench>
