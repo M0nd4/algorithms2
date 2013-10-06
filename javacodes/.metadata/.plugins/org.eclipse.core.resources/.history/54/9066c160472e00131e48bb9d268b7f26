@@ -1,0 +1,21 @@
+package tsp;
+
+public class City {
+    int x = 0;
+    int y = 0;
+
+    public City(int x, int y) {
+        this.x = x;
+        this.y = y;
+
+    }
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

@@ -1,0 +1,32 @@
+package tsp;
+
+public class City {
+    int                x         = 0;
+    int                y         = 0;
+    private static int numCities = 0;
+
+    public City(int x, int y) {
+        this.x = x;
+        this.y = y;
+        numCities++;
+    }
+
+    public static int cityCount() {
+        return numCities;
+    }
+
+    public double getDistanceTo(City that) {
+        return Math.sqrt(Math.pow(this.x - that.x, 2)
+                + Math.pow(this.y - that.y, 2));
+    }
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        City one = new City(1, 1);
+        City two = new City(2, 2);
+        System.out.println(cityCount());
+    }
+
+}

@@ -32,6 +32,7 @@ public class TSP {
                 points = new double[numPoints][2];
                 l++;
             } else {
+
                 points[i][0] = Double.parseDouble(parts[0]);
                 points[i][1] = Double.parseDouble(parts[1]);
                 i++;
