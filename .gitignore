@@ -1,5 +1,7 @@
 *~
 *.class
+tsp3.py
+tsp4.py
 auto/
 .r*
 /pythoncodes/.r*

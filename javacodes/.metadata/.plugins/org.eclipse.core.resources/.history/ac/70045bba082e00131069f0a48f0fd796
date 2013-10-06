@@ -1,0 +1,51 @@
+package tsp;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class TSP {
+    int numPoints;
+
+    private static double eucDist(int x1, int y1, int x2, int y2) {
+        return Math.sqrt((x1 - x2) ^ 2 + (y1 - y2) ^ 2);
+    }
+
+    /**
+     * Read in data: first line is number of vertices, Each subsequent line
+     * describes a point (x y coordinates separated by a space)
+     * 
+     * @throws IOException
+     */
+    public static int[][] readIn(String filename) throws IOException {
+        FileReader fileReader = new FileReader(filename);
+        BufferedReader br = new BufferedReader(fileReader);
+        String line = null;
+        int[][] points;
+        int i = 0;
+        while ((line = br.readLine()) != null) {
+            String[] parts = line.split(" ");
+            // Process the first line
+            if (i == 0) {
+                numPoints = Integer.parseInt(parts[0]);
+                G = new EdgeWeightedDigraph(numEdges);
+                i++;
+            } else {
+                DirectedEdge e = new DirectedEdge(Integer.parseInt(parts[0]),
+                        Integer.parseInt(parts[1]), Integer.parseInt(parts[2]));
+                G.addEdge(e);
+            }
+        }
+        br.close();
+        return G;
+    }
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}
