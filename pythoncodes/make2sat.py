@@ -32,3 +32,4 @@ def random_formula(n, m):
         seen.add((a,b))
         f.add_clause((a,b))
     return f
+
