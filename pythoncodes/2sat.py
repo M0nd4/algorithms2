@@ -18,7 +18,7 @@ from random import randint, choice, shuffle
 
 def readSat (filename): 
     "Read in 2sat problem: returns number variables and array of tuples, negative numbers are negated literals.  In each instance the number of clauses and the number of variables is the same."
-    lines = [line.strip() for line in open('c:/home/algorithms2/' + filename)]
+    lines = [line.strip() for line in open(filename)]
     numVars = int(lines[0])
     lines = [tuple([int(num) for num in line.split()]) for line in lines[1:]]
     return numVars, lines
@@ -63,7 +63,7 @@ def randGuess(n):
 # filename = '2sat1.txt'
 # n, clauses = readSat(filename)
 # Run unit test
-filestub = "~/algorithms2/2sat"
+filestub = "C:/home/algorithms2/2sat"
 def runTest(filestub, numFiles):
     "Run test files and print output to console"
     output = []
